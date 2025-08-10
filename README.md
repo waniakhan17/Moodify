@@ -1,2 +1,3 @@
 # Moodify
 The Mood-Based Journal & Habit Tracker is a full-stack web application designed to help users improve their mental well-being and personal productivity. It allows users to log their daily mood, maintain a personal journal, and track habit progress over time — all in one place.
+Users can sign up for an account, select their daily mood using emoji-based options, and write a short journal entry to reflect on their day. Alongside mood tracking, users can set personal habits (e.g., “Drink 8 glasses of water,” “Read for 30 minutes”) and mark them as completed as they progress.
