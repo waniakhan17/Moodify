@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Habits-Moodify</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="website icon" type="png" href="images/moddify-logo.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/styles.css" />
+
+</head>
+
+<body class="bg-gray-100 font-sans">
+  <header class="fixed w-[100%] z-10 bg-[#af478c] text-white shadow-md">
+    <nav class="flex justify-between items-center p-[20px] px-9">
+      <a href="#">
+        <h2 class="logo-text">Hi User!</h2>
+      </a>
+      <ul
+        class="nav-menu flex gap-[10px]  max-[900px]:fixed max-[900px]:left-[-300px] max-[900px]:top-0 max-[900px]:w-[300px] max-[900px]:h-full max-[900px]:bg-gray-100 max-[900px]:flex max-[900px]:items-center max-[900px]:flex-col max-[900px]:pt-[100px] max-[900px]:transition-[left] max-[900px]:duration-200 max-[900px]:ease-linear"
+        font-family="Poppins, sans-serif">
+
+        <button id="menu-close-button"
+          class="fas fa-times hidden max-[900px]:block max-[900px]:text-pink-400 max-[900px]:absolute max-[900px]:right-[30px] max-[900px]:top-[30px] "></button>
+        <li class="mt-3 max-[900px]:mt-0">
+          <a href="app.html"
+            class="nav-link transition duration-300 ease-linear hover:bg-white hover:text-[#af478c] hover:shadow-md max-[900px]:text-pink-400 max-[900px]:block max-[900px]:mt-[17px] max-[900px]:text-[1.3rem] max-[900px]:hover:bg-[#af478c] max-[900px]:hover:text-white">
+            JournalMe
+          </a>
+        </li>
+        <li class="mt-3 max-[900px]:mt-0">
+          <a href="habit.html"
+            class="nav-link transition duration-300 ease-linear hover:bg-white hover:text-[#af478c] hover:shadow-md max-[900px]:text-pink-400 max-[900px]:block max-[900px]:mt-[17px] max-[900px]:text-[1.3rem] max-[900px]:hover:bg-[#af478c] max-[900px]:hover:text-white">
+            Habit
+          </a>
+        </li>
+
+        <li class="mt-3 max-[900px]:mt-0">
+          <a href="stats.html"
+            class="nav-link transition duration-300 ease-linear hover:bg-white hover:text-[#af478c] hover:shadow-md max-[900px]:text-pink-400 max-[900px]:block max-[900px]:mt-[17px] max-[900px]:text-[1.3rem] max-[900px]:hover:bg-[#af478c] max-[900px]:hover:text-white">
+            Stats
+          </a>
+        </li>
+        <button id="logoutBtn"
+          class="nav-link transition duration-300 ease-linear bg-gray-100 text-[#af478c] hover:text-white hover:bg-[#af478c] hover:shadow-md max-[900px]:text-pink-400 max-[900px]:block max-[900px]:mt-[17px] max-[900px]:text-[1.3rem]  max-[900px]:hover:bg-[#af478c] max-[900px]:hover:text-white">
+          Logout
+        </button>
+      </ul>
+      <button id="menu-open-button"
+        class="fas fa-bars hidden max-[900px]:block max-[900px]:text-2xl max-[900px]: text-gray-100 hover:text-white "></button>
+    </nav>
+  </header>
+
+  <main class="flex items-center justify-center min-h-screen bg-gray-100">
+    <section class="bg-white mt-[70px] rounded-2xl shadow p-6 space-y-8 w-[70%] h-[75%] sm:w-[70%] md:h-[60%]">
+      <!--Header-->
+      <div class="max-w-5xl mx-auto px-2">
+        <div class="text-center mb-8">
+          <h1 class="text-3xl font-bold text-[#af478c]">📅 Habit Tracker</h1>
+          <p class="text-gray-600 mt-2">Build better habits, one day at a time</p>
+        </div>
+
+        <!--habit form-->
+        <form id="habitForm" class="bg-white rounded-lg shadow-md p-6 mb-8">
+          <h2 class="text-xl font-semibold text-gray-700 mb-4">Add new habit</h2>
+          <div class="flex flex-col min-[950px]:flex-row gap-4">
+            <input type="text" id="namehabit" placeholder="Habit name (e.g. 'Morning walk')" name="name"
+              class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#af479c] focus:border-[#9b7e92] outline-none">
+            <select class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#af479c] " name="frequency"
+              id="habitfrequency">
+              <option>Daily</option>
+              <option>Weekly</option>
+              <option>Monthly</option>
+            </select>
+            <div>
+              <input type="number" id="habitTarget" required placeholder="Target" name="target"
+                class="w-full p-2 border rounded-lg focus:ring-2 focus:ring-indigo-400" />
+            </div>
+
+            <input type="date" id="habitDate" name="startDate"
+              class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#af479c]">
+            <button type="submit" class="add bg-[#af478c] text-white px-6 py-2 rounded-lg hover:bg-[#69334a]">Add</button>
+          </div>
+        </form>
+
+        <!--habit lists-->
+        <div class="flex flex-col p-[10px] bg-white mt-[10px]">
+          <ul id="habitslist" class="space-y-4"></ul>
+        </div>
+
+        <!-- Stats -->
+        <div class="mt-8 bg-white rounded-lg shadow-md p-6">
+          <h2 class="text-xl font-semibold text-gray-800 mb-4">📊 Your Progress</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-indigo-50 p-4 rounded-lg text-center">
+              <p class="text-sm text-indigo-600">Current Streak</p>
+              <p class="text-2xl font-bold text-indigo-800" id="streaksID">0</p>
+            </div>
+            <div class="bg-purple-50 p-4 rounded-lg ext-center">
+              <p class="text-sm text-purple-600">Habits Tracked</p>
+              <p class="text-2xl font-bold text-purple-800" id="habit-tracker">0</p>
+            </div>
+          </div>
+
+        </div>
+              <div id="message" class="mt-[10px] p-[8px] px-[4px] rounded-[4px]"></div>
+
+    </section>
+  </main>
+
+  <script src="habitt.js"></script>
+</body>
+</html>

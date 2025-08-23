@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp-Moodify</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+        <link rel="website icon" type="png" href="images/moddify-logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="bg-[#af478c]">
+    <main>
+      <div
+        class="flex items-center justify-center"
+      >
+<div class="signup bg-white max-w-[600px] sm:max-w-[700px] md:max-w-[800px] rounded-2xl backdrop-blur-[20px]  px-[90px] py-4 m-4">            
+  <!--Signup text-->
+            <div class="Signup-header text-center mb-6 pt-10">
+              <h1 class="text-3xl font-bold text-gray-800">SignUp</h1>
+            </div>
+            
+            <form id="registerForm">
+              <!--Username-->
+               <div class="form-group mb-4">
+                <label for="password" class="text-black">Username:</label>
+                <div class="flex items-center mt-2 border-b border-gray-300">
+                  <i class="fas fa-user-circle text-gray-500 mr-2"></i>
+                  <input
+                    type="name"
+                    id="namee"
+                    name="name"
+                    class="w-full p-2 outline-none"
+                    placeholder="Type your name"
+                    required
+                  />
+                </div>
+            
+              </div>
+
+              <!--Email-->
+              <div class="form-group mb-4">
+                <label for="password" class="text-black">Email:</label>
+                <div class="flex items-center mt-2 border-b border-gray-300">
+                  <i class="fa-solid fa-envelope text-gray-500 mr-2"></i>
+                  <input
+                    type="email"
+                    id="emaill"
+                    name="email"
+                    class="w-full p-2 outline-none"
+                    placeholder="Type your email"
+                    required
+                  />
+                </div>
+             
+              </div>
+
+              <!--Password-->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+              <div class="form-group">
+                <label for="password" class="text-black">Password:</label>
+                <div class="flex items-center mt-2 border-b border-gray-300">
+                  <i class="fa-solid fa-lock text-gray-500 mr-2"></i>
+                  <input
+                    type="password"
+                    id="passwordd"
+                    name="password"
+                    class="w-full p-2 outline-none"
+                    placeholder="Type your password"
+                    required
+                  />
+                  <input type="checkbox" onclick="passwordd.type =this.checked ? 'text' : 'password'">
+                </div>
+             
+              </div>
+              
+              <!--Confirmation of password-->
+               <div class="form-group">
+                <label for="password" class="text-black">Re-enter your password:</label>
+                <div class="flex items-center mt-2 border-b border-gray-300">
+                  <i class="fa-solid fa-lock text-gray-500 mr-2"></i>
+                  <input
+                    type="password"
+                    id="confirmpasswordd"
+                    name="c_password"
+                    class="w-full p-2 outline-none"
+                    placeholder="Type your password"
+                    required
+                  />
+                  <input type="checkbox" onclick="confirmpasswordd.type =this.checked ? 'text' : 'password'">
+                </div>
+              </div>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+              <!--Gender-->
+               <div class="form-group">
+                <label for="gender" class="text-black">Gender:</label>
+                <select name="gender" id="gender" class="w-full mt-2 p-2 border-b border-gray-300 text-gray-600 outline-none">
+                  <option value="">Select Gender</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="other">Rather not to say</option>
+                </select>
+              
+              </div>
+
+              <!-- dob -->
+                <div class="form-group">
+                <label for="dob" class="text-black">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" class="w-full mt-2 p-2 border-b border-gray-300 text-gray-600 outline-none" >
+                
+                </div>
+              </div>
+            
+
+            <div class="flex flex-col md:flex-row justify-evenly items-center gap-4 mb-6">
+      <button onclick="registerUser()" type="submit" class="bg-[#af478c] p-5 px-8 text-white  hover:shadow-2xl  hover:rounded-full">
+        <!-- <i class="fa fa-user-plus" aria-hidden="true"></i> -->
+         Register
+      </button>
+
+      <div class="flex items-center gap-4">
+        <p class="text-gray-500 text-sm">Or Sign Up Using</p>
+        <a href="#" class="bg-red-500 text-white p-3  hover:shadow-2xl hover:rounded-full">
+          <i class="fab fa-google"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="text-center pb-3">
+      <p class="text-gray-500 text-sm">
+        Already have an account?
+        <a href="login.html" class="text-black font-semibold hover:underline">Login</a>
+      </p>
+    </div>
+</form>
+      <div id="message" class="mt-[10px] p-[8px] rounded-[4px]"></div>
+
+          </div>
+        </div>
+        
+    </main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+<script src="signup.js"></script>
+    
+</body>
+</html>

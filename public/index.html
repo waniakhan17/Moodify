@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moodify</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link rel="website icon" type="png" href="images/moddify-logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header
+      class="fixed w-[100%] z-5 bg-[#af478c] text-white shadow-md"
+    >
+      <nav class="flex justify-between items-center  p-[20px] px-9">
+        <a href="#">
+          <h2 class="logo-text">Moodify</h2>
+        </a>
+        <ul class="nav-menu flex gap-[10px] max-[900px]:block max-[900px]:fixed max-[900px]:left-[-300px] max-[900px]:top-0 max-[900px]:w-[300px] max-[900px]:h-full max-[900px]:bg-gray-100 max-[900px]:flex max-[900px]:items-center max-[900px]:flex-col max-[900px]:pt-[100px] max-[900px]:transition-[left] max-[900px]:duration-200 max-[900px]:ease-linear" font-family="Poppins, sans-serif">
+
+            <button id="menu-close-button" class="fas fa-times hidden max-[900px]:block max-[900px]:text-pink-400 max-[900px]:absolute max-[900px]:right-[30px] max-[900px]:top-[30px] "></button>
+
+            <li>
+            <a href="#" class="nav-link transition duration-300 ease-linear hover:bg-white hover:text-[#af478c] hover:shadow-md max-[900px]:text-pink-400 max-[900px]:block max-[900px]:mt-[17px] max-[900px]:text-[1.3rem] max-[900px]:hover:bg-[#af478c] max-[900px]:hover:text-white">
+                Home
+            </a>
+          </li>
+          <li>
+            <a href="#features" class="nav-link transition duration-300 ease-linear hover:bg-white hover:text-[#af478c] hover:shadow-md max-[900px]:text-pink-400 max-[900px]:block max-[900px]:mt-[17px] max-[900px]:text-[1.3rem] max-[900px]:hover:bg-[#af478c] max-[900px]:hover:text-white">
+                Features
+            </a>
+          </li>
+          <li>
+            <a href="#about" class="nav-link transition duration-300 ease-linear hover:bg-white hover:text-[#af478c] hover:shadow-md max-[900px]:text-pink-400 max-[900px]:block max-[900px]:mt-[17px] max-[900px]:text-[1.3rem] max-[900px]:hover:bg-[#af478c] max-[900px]:hover:text-white">
+                About
+            </a>
+          </li>
+         
+          <li>
+            <a href="signup.html" class="nav-link transition duration-300 ease-linear  hover:bg-white hover:text-[#af478c] hover:shadow-md max-[900px]:text-pink-400 max-[900px]:block max-[900px]:mt-[17px] max-[900px]:text-[1.3rem] max-[900px]:hover:bg-[#af478c] max-[900px]:hover:text-white">
+                Sign Up
+            </a>
+          </li>
+           <li>
+            <a href="login.html" class="nav-link transition duration-300 ease-linear bg-gray-100 text-[#af478c] hover:text-white hover:bg-[#af478c] hover:shadow-md max-[900px]:text-pink-400 max-[900px]:block max-[900px]:mt-[17px] max-[900px]:text-[1.3rem]  max-[900px]:hover:bg-[#af478c] max-[900px]:hover:text-white">
+                Login
+            </a>
+          </li>
+        </ul>
+            <button id="menu-open-button" class="fas fa-bars hidden max-[900px]:block max-[900px]:text-2xl max-[900px]: text-gray-100 hover:text-white "></button>
+
+      </nav>
+    </header>
+
+    <main>
+      <section
+        class="hero min-h-[90vh] flex items-center justify-center bg-green py-20 bg-[url('images/hero.png')] bg-cover bg-center bg-no-repeat"
+      >
+        <div class="text-center text-black">
+          <h1 class="text-5xl font-bold mb-4 px-2">Welcome to Moodify</h1>
+          <p class="text-lg mb-4">Your Daily Mood Journal & Habit Coach.</p>
+          <p class="text-[1rem] mb-4 px-3">
+            Log your daily mood, write personal reflections, and track habits
+            that matter to you. All in one beautiful, easy-to-use app.
+          </p>
+          <!-- <a href="#" class="bg-white text-blue-500 px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition duration-300">Get Started</a> -->
+        </div>
+      </section>
+
+      <section class="features bg-[#fff] py-20" id="features">
+        <h2
+          class="section-title text-center text-black uppercase font-lightbold p-[60px 0 100px] text-[1.99rem]"
+        >
+          Track. Reflect. Grow.
+        </h2>
+        <div class="p-[20px] bg-[#fff]">
+          <ul
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-4 bg-[#fff]"
+          >
+            <li class="hover:shadow-lg p-6 rounded-xl bg-white">
+              <h3 class="text-lg text-center font-medium">
+                😊 Mood Tracking with Emojis
+              </h3>
+              <p class="text-sm text-center">
+                Log your feelings using easy emoji-based options and spot
+                emotional patterns over time.
+              </p>
+            </li>
+
+            <li class="hover:shadow-lg p-6 rounded-xl bg-white">
+              <h3 class="text-lg text-center font-medium">📝 Daily Journal</h3>
+              <p class="text-sm text-center">
+                Write down your thoughts and reflect on your day with a simple,
+                distraction-free journal.
+              </p>
+            </li>
+            <li class="hover:shadow-lg p-6 rounded-xl bg-white">
+              <h3 class="text-lg text-center font-medium">
+                📊 Habit Progress Charts
+              </h3>
+              <p class="text-sm text-center">
+                Track daily habits with visual progress charts to keep yourself
+                motivated.
+              </p>
+            </li>
+            <li class="hover:shadow-md p-6 rounded-xl bg-white">
+              <h3 class="text-lg text-center font-medium">
+                🔒 Private & Secure
+              </h3>
+              <p class="text-sm text-center">
+                Your entries are encrypted and stored safely. Only you can
+                access your data.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="works bg-gray-50 py-20" >
+        <h2
+          class="section-title text-center text-black uppercase font-lightbold p-[60px 0 100px] text-[1.99rem]"
+        >
+          How It Works
+        </h2>
+        <div
+          class="works-content flex flex-col lg:flex-row items-center justify-center gap-12 p-6 bg-gray-50"
+        >
+          <!-- Step 1 -->
+          <div
+            class="work-step flex flex-col items-center text-center max-w-xs bg-white p-6 rounded-xl shadow-sm"
+          >
+            <img
+              src="images/signup.png"
+              alt="Step 1"
+              class="w-28 h-28 mb-4  "
+            />
+            <h3 class="text-xl font-semibold mb-2">Step 1: Sign Up</h3>
+            <p class="text-gray-600 text-sm">
+              Create your free account to keep your moods, journal, and habits
+              private and secure.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div
+            class="work-step flex flex-col items-center text-center max-w-xs  bg-white p-6 rounded-xl shadow-sm"
+          >
+            <img
+              src="images/journal.png"
+              alt="Step 2"
+              class="w-28 h-28 mb-4 "
+            />
+            <h3 class="text-xl font-semibold mb-2">
+              Step 2: Log Mood & Journal
+            </h3>
+            <p class="text-gray-600 text-sm">
+              Pick an emoji that matches your mood and write a short reflection
+              about your day.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div
+            class="work-step flex flex-col items-center text-center max-w-xs  bg-white p-6 rounded-xl shadow-sm"
+          >
+            <img
+              src="images/habit.png"
+              alt="Step 3"
+              class="w-28 h-28 mb-4 "
+            />
+            <h3 class="text-xl font-semibold mb-2">Step 3: Track & Review</h3>
+            <p class="text-gray-600 text-sm">
+              Check off your daily habits and see progress charts to stay
+              motivated.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="about bg-[#fff] py-20" id="about">
+        <h2
+          class="section-title text-center text-black uppercase font-lightbold p-[60px 0 100px] text-[1.99rem] p-0"
+        >
+          Why We Built This
+        </h2>
+        <div
+          class="about-content flex flex-col lg:flex-row items-center justify-center gap-8 p-4"
+        >
+          <div class="about-image-wrapper">
+            <img src="images/about-sec.png" alt="About" class="about-image" />
+          </div>
+          <div class="abt-details">
+            <p class="text">
+              "We created Moodify to help people connect with their emotions and
+              form healthy habits that last. Life can get overwhelming, and
+              sometimes we forget to check in with ourselves. Moodify makes it
+              simple to track your mood, reflect on your day, and stay motivated
+              through habit tracking."
+            </p>
+          </div>
+        </div>
+      </section>
+
+       
+    </main>
+     <footer class="footer-section  ">
+                <div class="section-content   ">
+                    <p class="copyright-text">&copy 2025 Moodify</p>
+                    <div class="social-links-list">
+                        <a href="#" class="social-link"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fa-brands fa-facebook"></i><a> 
+                    </div>
+                    <p class="policy-text">
+                        <a href="#" class="policy-link">Privacy policy</a>
+                        <span class="separator">|</span>
+                        <a href="#" class="policy-link">Refund policy</a>
+                    </p>
+                </div>
+            </footer>
+            <script src="script.js"></script>
+  </body>
+</html>
