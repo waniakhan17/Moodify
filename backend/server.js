@@ -7,7 +7,7 @@ const auth=require('./routes/auth')
 const authM=require('./middleware/auth');
 
 app.use(cors({
-    origin: 'http://localhost:5501' // or wherever your Go Live server is running
+    origin: '*' // or wherever your Go Live server is running
 ,credentials:true}));
 app.use(express.json())
 connectDB();
