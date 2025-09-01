@@ -2,7 +2,10 @@
 const loginEmail = document.getElementById("emailID");
 const loginPassword = document.getElementById("passwordID");
 const loginBtn = document.getElementById("loginB");
-const API_BASE_URL = "http://localhost:5000"; 
+const API_BASE_URL =
+  process.env.NODE_ENV === "production"
+    ? "https://moodify-moodifyyyy.up.railway.app"
+    : "http://localhost:5000";
 
 
 if (loginBtn) {
