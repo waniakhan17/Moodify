@@ -11,10 +11,13 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
-const API_BASE_URL =
-  process.env.NODE_ENV === "production"
-    ? "https://moodify-moodifyyyy.up.railway.app"
-    : "http://localhost:5000";
+const isProd = window.location.hostname !== "localhost";
+
+const API_BASE_URL = isProd
+  ? "https://moodify-moodifyyyy.up.railway.app"
+  : "http://localhost:5000";
+
+console.log("API Base URL:", API_BASE_URL);
   const token = localStorage.getItem("token");
 
   if (!token) {
